@@ -12,7 +12,7 @@
 
 		$.getJSON(json_url, function(data){
 			that._gettable_data = that._data = data;
-			that.init();
+			//that.init();
 		});
 
 		// 非同期通信の状態に戻す
@@ -20,13 +20,6 @@
 	}
 
 	App.Items.prototype = {
-
-		init : function(){
-			this.first_index = 0;
-			this.last_index  = this.get_all().length - 1;
-
-			//this.set_index(this.first_index);
-		},
 
 		get_all : function(){
 			return this._gettable_data;
@@ -57,6 +50,13 @@
 
 			return this;
 		}
+
+		// init : function(){
+		// 	this.first_index = 0;
+		// 	this.last_index  = this.get_all().length - 1;
+
+		// 	this.set_index(this.first_index);
+		// },
 
 		// get : function(index){
 		// 	index = this._adjust_index(index);
