@@ -28,9 +28,21 @@
 
 		get_all_attributes : function(attr_key){
 			var that = this;
-			return $.unique(this._data.map(function(val){
-				return val[attr_key];
-			}));
+
+			var len = this._data.length;
+			var array = [];
+			for (var i = 0; i < len; i++) {
+				array.push(this._data[i][attr_key]);
+			};
+
+			return array.filter(function (x, i, self) {
+				return self.indexOf(x) === i;
+			});
+
+			// return $.unique(this._data.map(function(val){
+			// 	return val[attr_key];
+			// }));
+
 		},
 
 		filter : function(conditions){
