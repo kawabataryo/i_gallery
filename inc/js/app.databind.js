@@ -43,8 +43,7 @@ App.DataBind = (function(window,$){
 				if($category.val() != 'all') conditions['item_category'] = $category.val();
 	
 				that.items.filter(conditions);
-				console.log(that.items);
-
+				that.showLoading();
 				that.display();
 			}
 
@@ -58,7 +57,6 @@ App.DataBind = (function(window,$){
 			var that = this;
 			var items_data = this.items.get_all();
 
-			console.log(items_data);
 			var $_list = $('#gallery');
 			$_list.empty();
 			items_data.forEach(function(item){
@@ -104,6 +102,12 @@ App.DataBind = (function(window,$){
 		anime: function(){
 			var $box = $('.box');
 			$box.addClass('anime_in');
+		},
+
+		// ローディング画面を表示 
+		showLoading: function(){
+			var $loading = $('#loading');
+			$loading.show();
 		},
 
 		// ローディング画面を消す
