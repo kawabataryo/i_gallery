@@ -5,7 +5,6 @@
 App.DataBind = (function(window,$){
 
 	// addSelectList用の設定項目
-	// App.Configとか作ってまとめたほうがよさげ
 	var SELECT_LIST_CONFIGS = [
 		{
 			'attr_key'        : 'item_category',
@@ -107,12 +106,6 @@ App.DataBind = (function(window,$){
 			$box.addClass('anime_in');
 		},
 
-		// ローディング画面を表示 
-		showLoading: function(){
-			var $loading = $('#loading');
-			$loading.show();
-		},
-
 		// ローディング画面を消す
 		removeLoading: function(){
 			var $loading = $('#loading');
@@ -126,7 +119,7 @@ App.DataBind = (function(window,$){
 				var src = src.replace('/t/','/b/')
 				$('<img />').attr('src', src);
 			});
-		},
+		}
 	}
 
 	return _DataBind;

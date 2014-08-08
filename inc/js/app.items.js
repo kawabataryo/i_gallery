@@ -28,51 +28,12 @@
 			this.set_index(this.first_index); 
 		},
 
-		get : function(index){
-			index = this._adjust_index(index);
-			return this._gettable_data[index];
-		},
-
 		get_all : function(){
 			return this._gettable_data;
 		},
 
 		set_index : function(index){
 			this._index = this._adjust_index(index);
-		},
-
-		get_current_index : function(){
-			return this._index;
-		},
-
-		get_next_index : function(){
-			return this._adjust_index(this._index + 1);
-		},
-
-		get_prev_index : function(){
-			return this._adjust_index(this._index - 1);
-		},
-
-		current : function(){
-			return this.get(this.get_current_index());
-		},
-
-		next : function(){
-			this.set_index(this.get_next_index());
-			return this.get(this.get_current_index());
-		},
-
-		prev : function(){
-			this.set_index(this.get_prev_index());
-			return this.get(this.get_current_index());
-		},
-
-		has_next : function(){
-			return (this.get_current_index() < this.last_index);
-		},
-
-		has_prev : function(){
-			return (this.get_current_index() > this.first_index);
 		},
 
 		get_all_attributes : function(attr_key){
@@ -95,7 +56,7 @@
 			}
 
 			this._gettable_data = result_data;
-			this.init();
+			// this.init();
 
 			return this;
 		},
