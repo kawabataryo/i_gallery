@@ -23,6 +23,7 @@ module.exports = function(grunt) {
 				src : [
 				'js/app.js',
 				'js/app.namespace.js',
+				'js/app.items.js',
 				'js/app.databind.js',
 				'js/app.gallery.js'
 				],
