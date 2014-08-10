@@ -1,11 +1,20 @@
 [
 	{
 		"member_id": 1,
-		"member_name": "",
-		"item_category": "",
+		"member_name": "Kawabata Ryo",
+		"item_category": "test01",
 		"item_id": 0,
 		"item_name": "",
-		"item_src": ""
+		"item_src": "img01.jpg"
+	},
+
+	{
+		"member_id": 1,
+		"member_name": "Kawabata Ryo",
+		"item_category": "test02",
+		"item_id": 0,
+		"item_name": "",
+		"item_src": "img01.jpg"
 	}
 
 ]
