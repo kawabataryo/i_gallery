@@ -28,6 +28,7 @@ App.DataBind = (function(window,$){
 
 			this.display();
 			this.addSelectList();
+			this.preload();
 		},
 
 		// フィルタリング機能をDOMに実装
@@ -77,7 +78,6 @@ App.DataBind = (function(window,$){
 			$(".last img").load(function(){
 				that.removeLoading();
 				that.anime();
-				that.preload();
 			});
 
 		},
